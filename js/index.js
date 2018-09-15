@@ -5,8 +5,8 @@ var btnFront = btn.querySelector( '.btn-front' ),
     btnNo = btn.querySelector( '.btn-back .no' );
 
 var titleArr = ["请输入性别,例:'男'或'女'","请输入你的姓名","你的微信号是什么","我以前说你长得像谁"]
-//var answerArr = ["女","何静","jjjsyds","佐佐木希"]
-var answerArr = ["1","2","3","4"]
+var answerArr = ["女","何静","jjjsyds","佐佐木希"]
+//var answerArr = ["1","2","3","4"]
 var currentIndex = 0
 var isShow = false
 //
