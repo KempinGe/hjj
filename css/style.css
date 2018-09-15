@@ -21,6 +21,10 @@ body {
   align-items: center;
 }
 
+#content {
+  width: 70%;
+  align-items: center;
+}
 
 .ccc p{
   background-color: #f5f5f5;

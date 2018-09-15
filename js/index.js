@@ -5,7 +5,8 @@ var btnFront = btn.querySelector( '.btn-front' ),
     btnNo = btn.querySelector( '.btn-back .no' );
 
 var titleArr = ["请输入性别,例:'男'或'女'","请输入你的姓名","你的微信号是什么","我以前说你长得像谁"]
-var answerArr = ["女","666","ggg","佐佐木希"]
+//var answerArr = ["女","何静","jjjsyds","佐佐木希"]
+var answerArr = ["1","2","3","4"]
 var currentIndex = 0
 var isShow = false
 //
@@ -51,7 +52,7 @@ function show(){
 }
 
 function reStar(){
-  currentIndex = 0
+  currentIndex = getCookie()
   isShow = false
 }
 
@@ -81,6 +82,7 @@ btnYes.addEventListener( 'click', function( event ) {
     return
   }
   currentIndex++
+  setCookie()
   setTimeout("show()",1000)
 } );
 
@@ -90,14 +92,33 @@ btnNo.addEventListener( 'click', function( event ) {
     window.location.href = ''
 } );
 
+function setCookie(){
+  var date=new Date();
+//将date设置为过去的时间
+
+  date.setTime(date.getTime()-10000);
+//将userId这个cookie删除
+
+  document.cookie="cur=" + currentIndex + "; expire="+date.toGMTString();
+}
+
+function getCookie(){
+  var strCookie=document.cookie;
+  var arrCookie=strCookie.split("; ");
+  for(var i=0;i<arrCookie.length;i++){
+    var arr=arrCookie[i].split("=");
+    if(arr[0] === 'cur') return parseInt(arr[1]);
+  }
+  return 0;
+}
 
 function hideBtn(){
   var obj = document.getElementById("bg-btn");
   var bg =  document.getElementById("content");
   obj.style.display = 'none'
   bg.style.display = 'block'
-  var content =  document.getElementById("content-p");
-  content.innerHTML = '的深V <br/> 送到公司盾构法看反馈给 <br/>阿莉芙拉嘎客服'
+  var content =  document.getElementById("content");
+  content.innerHTML = "<p>你好: </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;我很奇怪你为什么主动该给我发张好人卡,我又没有跟你表白或者要求什么,我只是需要一个符号或者象征什么的.我认识你的时候刚跟前女友分手不久,可能是找到了宣泄口吧.<br/> </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;我跟你聊了挺长时间了,算是大概有个了解吧,有时候挺替你担心的,(此处应有说教),但是并没有,道理不是真理,所以不能套用在每个人身上.&nbsp; 最后,并不想问你是正爱慕谁/等待谁/或者干脆单身主义,只希望你能幸福吧. </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;一个小小建议,有人让我明白了一个刻骨铭心的道理那就是:要现实,so我觉得单身主义不适合你的,去试着主动接触你喜欢的人吧,记住啊 最是人间留不住,美人辞镜花辞树,要珍惜时光.<br/> </p> <p> &nbsp;&nbsp;<br/> </p>"
 }
 
 
