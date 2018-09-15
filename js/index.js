@@ -78,6 +78,8 @@ btnYes.addEventListener( 'click', function( event ) {
   }
 
   if(currentIndex == (titleArr.length - 1)){
+    currentIndex = 0
+    setCookie()
     hideBtn()
     return
   }
