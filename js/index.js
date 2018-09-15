@@ -120,7 +120,7 @@ function hideBtn(){
   obj.style.display = 'none'
   bg.style.display = 'block'
   var content =  document.getElementById("content");
-  content.innerHTML = "<p>你好: </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;我很奇怪你为什么主动给我发张好人卡,我又没有跟你表白也不会要求你什么,我只是需要一个符号或者象征什么的<br/> </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;算起来我跟你聊了挺长时间了,算是大概有个了解吧,有时候挺替你担心的，有人让我明白了一个刻骨铭心的道理那就是:要现实。&nbsp;&nbsp;俗话说&nbsp;最是人间留不住,美人辞镜花辞树,要珍惜时光啊何静静！.<br/> </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;最后不管怎样希望你能幸福快乐。<br/> </p>"
+  content.innerHTML = "<p>你好: </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;我很奇怪你为什么主动给我发张好人卡,我又没有跟你表白也不会要求你什么,我只是需要一个符号或者象征什么的<br/> </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;算起来我跟你聊了挺长时间了,算是大概有个了解吧,有时候挺替你担心的，有人让我明白了一个刻骨铭心的道理那就是:要现实。&nbsp;&nbsp;俗话说&nbsp;最是人间留不住,美人辞镜花辞树,要珍惜时光啊何静静！.<br/> </p> <p> &nbsp;&nbsp;&nbsp;&nbsp;不管怎样只希望你幸福快乐！<br/> </p>"
 }
 
 
